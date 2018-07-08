@@ -1,0 +1,30 @@
+{
+  "name": "huijiewei/yii2-swagger",
+  "description": "Swagger 扩展",
+  "type": "yii2-extension",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Huijie Wei",
+      "email": "huijiewei@outlook.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": "^7.1.3",
+    "yiisoft/yii2": "^2.0",
+    "zircote/swagger-php": "^2.0",
+    "bower-asset/swagger-ui": "^3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "huijiewei\\swagger\\": "src"
+    }
+  },
+  "repositories": {
+    "asset": {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
+  }
+}
