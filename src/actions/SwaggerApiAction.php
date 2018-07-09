@@ -68,10 +68,20 @@ class SwaggerApiAction extends Action
     {
         $scanDir = $this->scanDir;
 
-        if (StringHelper::startsWith($scanDir, '@')) {
-            $scanDir = \Yii::getAlias($scanDir);
+        if (is_string($scanDir)) {
+            $scanDir = [$scanDir];
         }
 
-        return \Swagger\scan($scanDir, $this->scanOptions);
+        $aliasScanDir = [];
+
+        foreach ($scanDir as $dir) {
+            if (StringHelper::startsWith($dir, '@')) {
+                $aliasScanDir[] = \Yii::getAlias($dir);
+            } else {
+                $aliasScanDir[] = $dir;
+            }
+        }
+
+        return \Swagger\scan($aliasScanDir, $this->scanOptions);
     }
 }
