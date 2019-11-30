@@ -13,10 +13,10 @@ use yii\web\View;
 
 class SwaggerUiAsset extends AssetBundle
 {
-    public $sourcePath = '@npm/swagger-ui/dist';
+    public $sourcePath = '@npm/swagger-ui-dist';
 
     public $js = [
-        'swagger-ui.js',
+        'swagger-ui-bundle.js',
         'swagger-ui-standalone-preset.js',
     ];
 

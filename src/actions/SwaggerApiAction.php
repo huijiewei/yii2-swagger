@@ -82,6 +82,6 @@ class SwaggerApiAction extends Action
             }
         }
 
-        return \Swagger\scan($aliasScanDir, $this->scanOptions);
+        return \OpenApi\scan($aliasScanDir, $this->scanOptions);
     }
 }
