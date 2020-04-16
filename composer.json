@@ -19,11 +19,5 @@
     "psr-4": {
       "huijiewei\\swagger\\": "src"
     }
-  },
-  "repositories": {
-    "asset": {
-      "type": "composer",
-      "url": "https://asset-packagist.org"
-    }
   }
 }
